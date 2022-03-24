@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="580.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.deliverable.CheckViewScheduleController">
+   <children>
+      <BorderPane prefHeight="580.0" prefWidth="770.0">
+         <top>
+            <AnchorPane prefHeight="111.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="239.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK SCHEDULE" wrappingWidth="292.13671875">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="22.0" layoutY="37.0" mnemonicParsing="false" onAction="#onBackButtonSchedule" prefHeight="30.0" prefWidth="67.0" text="Back">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ChoiceBox fx:id="departchoicebox" layoutX="362.0" layoutY="170.0" prefHeight="30.0" prefWidth="205.0" />
+                  <ChoiceBox fx:id="arrivalchoicebox" layoutX="362.0" layoutY="260.0" prefHeight="30.0" prefWidth="205.0" />
+                  <Label layoutX="119.0" layoutY="170.0" prefHeight="30.0" prefWidth="156.0" text="Departure Station">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="260.0" prefHeight="30.0" prefWidth="156.0" text="Arrival Station">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="220.0" layoutY="347.0" text="Choice Selected: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mylabel" layoutX="362.0" layoutY="347.0" prefHeight="21.0" prefWidth="164.0" text="-">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checklabel" layoutX="304.0" layoutY="70.0" prefHeight="17.0" prefWidth="250.0" text="*" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="563.0" layoutY="399.0" mnemonicParsing="false" onAction="#onSubmitButtonSchedule" prefHeight="36.0" prefWidth="179.0" text="SUBMIT">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
