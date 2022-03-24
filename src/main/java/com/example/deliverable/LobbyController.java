@@ -38,4 +38,26 @@ public class LobbyController {
         stage.show();
     }
 
+    public void setViewFareButton (ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("viewfare.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene= new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void setIssueTicketButton(ActionEvent event) throws IOException{
+
+    }
+
+    public void setCancelTicketButton(ActionEvent event) throws IOException{
+
+    }
+
+    public void setBookingsButton(ActionEvent event) throws IOException{
+
+    }
+
+
+
 }
