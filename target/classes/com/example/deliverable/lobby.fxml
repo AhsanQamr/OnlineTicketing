@@ -51,22 +51,22 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="15.0" layoutY="246.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="214.0" text="VIEW FARES">
+                  <Button layoutX="15.0" layoutY="246.0" mnemonicParsing="false" onAction="#setViewFareButton" prefHeight="37.0" prefWidth="214.0" text="VIEW FARES">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="15.0" layoutY="312.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="214.0" text="ISSUE TICKET">
+                  <Button layoutX="15.0" layoutY="312.0" mnemonicParsing="false" onAction="#setIssueTicketButton" prefHeight="37.0" prefWidth="214.0" text="ISSUE TICKET">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="15.0" layoutY="380.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="214.0" text="CANCEL TICKET">
+                  <Button layoutX="15.0" layoutY="380.0" mnemonicParsing="false" onAction="#setCancelTicketButton" prefHeight="37.0" prefWidth="214.0" text="CANCEL TICKET">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="15.0" layoutY="440.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="214.0" text="SEE BOOKING'S">
+                  <Button layoutX="15.0" layoutY="440.0" mnemonicParsing="false" onAction="#setBookingsButton" prefHeight="37.0" prefWidth="214.0" text="SEE BOOKING'S">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
