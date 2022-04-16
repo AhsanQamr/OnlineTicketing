@@ -4,35 +4,22 @@ import java.util.Random;
 
 public class Reservation {
 
-    private String name, cnic,flight_number,fare,dep_airport,arr_airport, dep_time,arr_time,seatno;//,ticket_number;
-    //private String seatno;
-    private int ticket_number;
-
+    private String seatno;
+    Random random= new Random();
+    public int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+    private int ticket_number = getRandomNumber(0,9999);
 
 
     private static Reservation reservation = new Reservation();
 
-    public Reservation() {
-        this("","","","","","","","","",0);
-    }
+    public Reservation() {}
 
     public static Reservation getInstance(){
         if(reservation == null)
             reservation = new Reservation();
         return reservation;
-    }
-
-    public Reservation(String name, String cnic, String flight_number, String fare, String dep_airport, String arr_airport, String dep_time, String arr_time, String seatno, int ticket_number) {
-        this.name = name;
-        this.cnic = cnic;
-        this.flight_number = flight_number;
-        this.fare = fare;
-        this.dep_airport = dep_airport;
-        this.arr_airport = arr_airport;
-        this.dep_time = dep_time;
-        this.arr_time = arr_time;
-        this.seatno = seatno;
-        setTicket_number(ticket_number);
     }
 
     Passenger passenger = Passenger.getInstance();
@@ -63,14 +50,12 @@ public class Reservation {
     }
 
     public int getTicket_number() {
-        return this.ticket_number;
+        return ticket_number;
 
     }
 
     public void setTicket_number(int ticket_number) {
-        ticket_number = (int)Math.floor((Math.random()*(9999-0+1)+0));
         this.ticket_number = ticket_number;
-
     }
 
     public String getFare() {
