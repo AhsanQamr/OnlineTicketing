@@ -40,10 +40,10 @@
                </children>
             </AnchorPane>
          </bottom>
-         <left>
+         <right>
             <AnchorPane prefHeight="380.0" prefWidth="770.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField layoutX="128.0" layoutY="71.0" prefHeight="34.0" prefWidth="192.0" promptText="Full name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="fullnamelabel" layoutX="128.0" layoutY="71.0" prefHeight="34.0" prefWidth="192.0" promptText="Full name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
                   <Label layoutX="28.0" layoutY="88.0" prefHeight="25.0" prefWidth="115.0" text="FullName:" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="15.0" />
@@ -69,7 +69,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="397.0" layoutY="152.0" prefHeight="25.0" prefWidth="115.0" text="DOB(D-M-Y):" textAlignment="CENTER">
+                  <Label layoutX="397.0" layoutY="152.0" prefHeight="25.0" prefWidth="115.0" text="Age" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -79,14 +79,24 @@
                         <Image url="@images/user.jpg" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="128.0" layoutY="135.0" prefHeight="34.0" prefWidth="192.0" promptText="User name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
-                  <TextField layoutX="128.0" layoutY="195.0" prefHeight="34.0" prefWidth="192.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
-                  <TextField layoutX="128.0" layoutY="256.0" prefHeight="34.0" prefWidth="192.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
-                  <TextField layoutX="512.0" layoutY="71.0" prefHeight="34.0" prefWidth="192.0" promptText="CNIC No. " style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
-                  <TextField layoutX="512.0" layoutY="135.0" prefHeight="34.0" prefWidth="192.0" promptText="Date of Birth" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="usernamelabel" layoutX="128.0" layoutY="135.0" prefHeight="34.0" prefWidth="192.0" promptText="User name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="emaillabel" layoutX="128.0" layoutY="195.0" prefHeight="34.0" prefWidth="192.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="passwordlabel" layoutX="128.0" layoutY="256.0" prefHeight="34.0" prefWidth="192.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="cniclabel" layoutX="512.0" layoutY="71.0" prefHeight="34.0" prefWidth="192.0" promptText="CNIC No. " style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <TextField fx:id="agelabel" layoutX="512.0" layoutY="135.0" prefHeight="34.0" prefWidth="192.0" promptText="Age" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 3px 0px;" />
+                  <Label fx:id="promptatregister" alignment="CENTER" layoutX="157.0" layoutY="349.0" prefHeight="24.0" prefWidth="504.0" text="-" textAlignment="CENTER" textFill="#da0c0c">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="644.0" layoutY="258.0" mnemonicParsing="false" onAction="#setRefreshButton" prefHeight="31.0" prefWidth="78.0" text="Refresh">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
-         </left>
+         </right>
       </BorderPane>
    </children>
 </AnchorPane>

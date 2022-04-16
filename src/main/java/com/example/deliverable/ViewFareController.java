@@ -7,10 +7,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class ViewFareController {
 
@@ -19,8 +23,7 @@ public class ViewFareController {
     private Parent root;
 
     @FXML
-    private ChoiceBox<String> arrivalchoicebox;
-
+    private DatePicker datechoicebox;
 
     @FXML
     private ChoiceBox<String> departchoicebox;
@@ -28,16 +31,17 @@ public class ViewFareController {
     @FXML
     private Label mylabel;
 
+    @FXML
+    private Label promptlabel;
 
-    private String[] Station ={"Islamabad","Lahore","Karachi","Quetta","Skardu"};
+
+    private String[] Station ={"San-Francisco","New York","Los-Angeles","Chicago"};
 
     @FXML
     public void initialize() {
         departchoicebox.getItems().addAll(Station);
         departchoicebox.setOnAction(this::DepartStationinput);
 
-        arrivalchoicebox.getItems().addAll(Station);
-        arrivalchoicebox.setOnAction(this::ArrivalStationinput);
     }
 
     String mydepartStation;
@@ -46,14 +50,28 @@ public class ViewFareController {
         mylabel.setText(mydepartStation);
         // trainSchedule.setDeparture_platform(mydepartStation);
     }
-    String myarrivalStation;
-    public void ArrivalStationinput(ActionEvent event){
-        myarrivalStation = arrivalchoicebox.getValue();
-        mylabel.setText(myarrivalStation);
-        // trainSchedule.setArrival_platform(myarrivalStation);
+
+    String formattedDate;
+    public void getDate(ActionEvent event){
+        LocalDate localDate = datechoicebox.getValue();
+        formattedDate = localDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        System.out.println(formattedDate);//.toString());
     }
 
     public void setSubmitButtonFare(ActionEvent event) throws IOException{
+
+        FlightDescription flightDescription = FlightDescription.getInstance();
+        // if no trains moving then simply put alert box
+        DepartStationinput(event);
+        getDate(event);
+        String result = flightDescription.seeFare(mydepartStation,formattedDate);
+
+        if(!Objects.equals(result, "Found")){
+            promptlabel.setText(result);
+            return;
+        }
+
+
         root = FXMLLoader.load(getClass().getResource("farewindow.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene= new Scene(root);

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="560.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.deliverable.CancelTicketC">
+   <children>
+      <Label alignment="CENTER" layoutX="167.0" layoutY="42.0" prefHeight="50.0" prefWidth="409.0" text="Ticket Cancellation" underline="true">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <Button layoutX="24.0" layoutY="30.0" mnemonicParsing="false" onAction="#setBackButton" text="Back" />
+      <Label layoutX="64.0" layoutY="173.0" text="Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="240.0" text="Cnic">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="305.0" text="Ticket Number">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="173.0" text="Departure Airport">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="236.0" text="Arrival Airport">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" alignment="CENTER" layoutX="185.0" layoutY="170.0" prefHeight="28.0" prefWidth="189.0" text="-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cnic" alignment="CENTER" layoutX="185.0" layoutY="237.0" prefHeight="28.0" prefWidth="189.0" text="-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="ticketno" alignment="CENTER" layoutX="185.0" layoutY="302.0" prefHeight="28.0" prefWidth="189.0" text="-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="depname" alignment="CENTER" layoutX="556.0" layoutY="170.0" prefHeight="28.0" prefWidth="189.0" text="-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="arrname" alignment="CENTER" layoutX="556.0" layoutY="233.0" prefHeight="28.0" prefWidth="189.0" text="-">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="488.0" layoutY="466.0" mnemonicParsing="false" onAction="#setCancelTicketButton" prefHeight="44.0" prefWidth="189.0" text="Cancel Ticket">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="prompt" alignment="CENTER" layoutX="194.0" layoutY="124.0" prefHeight="17.0" prefWidth="331.0" text="-" textFill="#c91010" />
+   </children>
+</AnchorPane>
