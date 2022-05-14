@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.deliverable.LobbyController">
    <children>
@@ -89,6 +91,22 @@
                         <Font name="AdobeDevanagari-Regular" size="13.0" />
                      </font>
                   </TextArea>
+                  <Hyperlink fx:id="luggage" alignment="CENTER" layoutX="7.0" layoutY="84.0" onAction="#setLuggagePolicyScene" prefHeight="29.0" prefWidth="176.0" text="View Luggage Policy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="cancel" alignment="CENTER" layoutX="11.0" layoutY="138.0" onAction="#setCancelPolicyScene" prefHeight="29.0" prefWidth="169.0" text="View Cancel Policy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="100.0" layoutX="79.0" layoutY="187.0" startX="-65.0" />
+                  <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Policies" underline="true">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="33.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </right>

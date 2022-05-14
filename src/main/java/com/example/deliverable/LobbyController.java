@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -120,5 +121,20 @@ public class LobbyController {
         stage.show();
     }
 
+    public void setLuggagePolicyScene(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("luggagepolicy.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene= new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void setCancelPolicyScene(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("cancelpolicy.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene= new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

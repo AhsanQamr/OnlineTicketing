@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="580.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.deliverable.LuggageController">
+   <children>
+      <ImageView fitHeight="140.0" fitWidth="745.0" layoutX="13.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/policy.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="264.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luggage Policy" underline="true">
+         <font>
+            <Font name="AdobeDevanagari-Bold" size="40.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="13.0" layoutY="272.0" prefHeight="318.0" prefWidth="745.0" text="Security check for personal electronic devices (UK and USA)&#10;&#10;Passengers on UK and USA-bound Qatar Airways flights departing or transiting from Hamad International Airport with personal electronic devices must adhere to the following instructions.&#10;&#10;UK-bound flights&#10;&#10;You may be asked by security staff to turn on personal electronic devices that are larger than a mobile phone, including tablets, e-books and laptops during the security screening conducted at the boarding gate.&#10;Ensure your electronic device(s) has sufficient power to be switched on to demonstrate its functionality. Make sure you do not deplete power in your devices as charging points at the airport might be limited and you may require an adapter.&#10;Devices without any power will be placed in a secure location on the aircraft that cannot be accessed, and returned at the final destination.&#10;If more than six personal electronic individual devices are already secured, then you will have to check-in your device into your hand baggage, which will be stored in the aircraft hold.&#10;If you are unable to check-in your hand baggage with the device or do not have a hand baggage, then your item will need to be deposited with Lost and Found. You will then be required to make a claim on the airline website and collect the item from the airport on your return. &#10;&#10;USA-bound flights&#10;&#10;With immediate effect, all personal electronic devices carried on board all USA-bound flights from Doha, are subject to enhanced security screening.&#10;Ensure your electronic device(s) has sufficient power to be switched on to demonstrate its functionality. Make sure you do not deplete power in your devices as charging points at the airport might be limited and you may require an adapter. &#10;Consider packing all personal electronic devices that you do not intend to use in-flight into your check-in baggage.&#10;Examples of personal electronic devices that are subject to enhanced security screening include: DSLR camera | Radio | E-reader | Walkie-talkie | Laptop | Tablet | Water purifier | Large game console | Monitor| CD-ROM | Drone | Electric guitar | Printer and scanner&#10;&#10;The Transportation Security Administration (TSA) screens all airline passengers and baggage">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="24.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detailed Information" underline="true">
+         <font>
+            <Font name="AdobeDevanagari-Bold" size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="25.0" prefWidth="57.0" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
