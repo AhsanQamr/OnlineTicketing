@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -53,53 +54,97 @@ public class RegisterController {
     Passenger P = Passenger.getInstance();
 
 
-    public void setFullNameLabel(){
+    public boolean setFullNameLabel(){
         String fullName;
         fullName = fullnamelabel.getText();
+
+        if(!(fullName.matches("^[a-zA-Z\\s]+"))){
+            promptatregister.setText("Fullname must contain only alphabets with no specials");
+            return false;
+        }
+
         P.setFullName(fullName);
+        return true;
     }
-    public void setUserNameLabel(){
+    public boolean setUserNameLabel() {
         String userName;
         userName = usernamelabel.getText();
+
+        if (!(userName.matches("^[a-zA-Z]\\w{4,19}$"))) {
+            promptatregister.setText("username must not start with alphabet, and characters between 5 to 20");
+            return false;
+        }
+
         P.setUserName(userName);
+        return true;
     }
     public void setEmailLabel(){
         String email;
         email = emaillabel.getText();
         P.setEmail(email);
     }
-    public void setPasswordLabel(){
+    public boolean setPasswordLabel(){
         String password;
         password = passwordlabel.getText();
+
+        if(password.length()<8 || password.length()>15){
+            promptatregister.setText("password contains 8 to 15 characters");
+            return false;
+        }
         P.setPassword(password);
+        return true;
     }
-    public void setCnicLabel(){
+    public boolean setCnicLabel(){
         String cnic;
         cnic = cniclabel.getText();
+
+        if(cnic.length() != 13){
+            promptatregister.setText("Only 13 numeric characters allowed");
+            return false;
+        }
         P.setCnicNo(cnic);
+        return true;
     }
-    public void setAgeLabel(){
+    public boolean setAgeLabel(){
         String  age;
         age = agelabel.getText();
+
+        int age_int = Integer.parseInt(age);
+        if(age_int<18){
+            promptatregister.setText("Below 18 children not allowed to signup");
+            return false;
+        }
         P.setAge(age);
+        return true;
     }
 
 
 
     public void setSubmitButton(ActionEvent event) throws IOException {
 
-        setFullNameLabel();
-        setUserNameLabel();
+        if(!setFullNameLabel()){
+            return;
+        }
+        if(!setUserNameLabel()){
+            return;
+        }
+        if(!setCnicLabel()){
+            return;
+        }
+        if(!setPasswordLabel()){
+            return;
+        }
         setEmailLabel();
-        setPasswordLabel();
-        setCnicLabel();
-        setAgeLabel();
 
+        if(!setAgeLabel())
+            return;
 
         String result = P.signUp();
+
         if(!Objects.equals(result, "Success")){
             if(Objects.equals(result, "Error connecting to database")){
-                promptatregister.setText("Username already taken!   Press 'Refresh' and try Again");
+                System.out.println("Database issues are here i think");
+                promptatregister.setText("Username already taken!");
                 return;
             }
             promptatregister.setText(result);
@@ -130,3 +175,11 @@ public class RegisterController {
 
 
 }
+
+
+//    public void handle(ActionEvent event) {
+//        if(!fnamefield.getText().matches("[aA-zZ ]+$")) {
+//            ErrorAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Error!", "Please enter your full name.\n"
+//                    + "Please make sure no");
+//            return;
+//        }

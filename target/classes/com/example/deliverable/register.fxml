@@ -94,6 +94,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
+                  <Text fill="#d31616" layoutX="28.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Note:  If any glitch occurs press Refresh and try again" wrappingWidth="272.13671875" />
                </children>
             </AnchorPane>
          </right>

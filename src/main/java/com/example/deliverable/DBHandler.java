@@ -1,10 +1,8 @@
 package com.example.deliverable;
 
-import javafx.stage.Stage;
-
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.Objects;
+
 
 public class DBHandler {
 
@@ -45,16 +43,12 @@ public class DBHandler {
 
 
 
-
-
-
-
     public String signUp(String fullname, String username, String email, String password, String cnic, String age) {
 
         try{
             getConnection();
 
-            if(Objects.equals(fullname, "") || Objects.equals(username, "") || Objects.equals(email, "") || Objects.equals(password, "") || Objects.equals(cnic, "")){
+            if(Objects.equals(fullname, "") || Objects.equals(username, "") || Objects.equals(email, "") || Objects.equals(password, "") || Objects.equals(cnic, "") || Objects.equals(age,"")){
                 return "Fields are empty";
             }
 
@@ -66,8 +60,6 @@ public class DBHandler {
             statement.setString(4,password);
             statement.setString(5,cnic);
             statement.setString(6, age);
-
-
 
             int resultSet = statement.executeUpdate();
             if(resultSet>0){
@@ -92,7 +84,6 @@ public class DBHandler {
         }
 
     }
-
 
 
     public String login(String userName, String password) {
